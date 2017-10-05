@@ -1,4 +1,4 @@
-package br.com.ufjf.dcc078.persistencia;
+package Persistencia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

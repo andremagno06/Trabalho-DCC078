@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ufjf.dcc078.Modelo;
+package Model;
 
-import br.com.ufjf.dcc078.DAO.QuartoDAO;
+import DAO.QuartoDAO;
 
 /**
  *

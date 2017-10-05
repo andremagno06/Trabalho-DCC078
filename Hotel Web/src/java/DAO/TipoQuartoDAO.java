@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ufjf.dcc078.DAO;
+package DAO;
 
 /**
  *
  * @author Desenvolvedor
  */
-public class ReservaDAO {
+public class TipoQuartoDAO {
     
 }

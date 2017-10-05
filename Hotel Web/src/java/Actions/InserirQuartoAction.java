@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ufjf.dcc078.Action;
+package Actions;
 
-import br.com.ufjf.dcc078.Action.Controller.Action;
-import br.com.ufjf.dcc078.DAO.QuartoDAO;
-import br.com.ufjf.dcc078.Modelo.Quarto;
+import Controller.Action;
+import DAO.QuartoDAO;
+import Model.Quarto;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;

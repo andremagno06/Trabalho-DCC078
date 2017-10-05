@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ufjf.dcc078.DAO;
+package DAO;
 
-import br.com.ufjf.dcc078.Modelo.Quarto;
-import br.com.ufjf.dcc078.persistencia.DatabaseLocator;
+import Model.Quarto;
+import Persistencia.DatabaseLocator;
 import com.sun.javafx.scene.control.skin.VirtualFlow;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -38,7 +38,7 @@ public class QuartoDAO {
         PreparedStatement st = null;
         try {
             conn = DatabaseLocator.getInstance().getConnection();
-            st = conn.prepareStatement("insert into quarto (descricao, estado, tipo_quarto_id values (?, ?, ?)");
+            st = conn.prepareStatement("insert into quarto (descricao, estado, tipo_quarto_id) values (?, ?, ?)");
             
            st.setString(1, quarto.getDescricao());
            st.setString(2, quarto.getEstado());

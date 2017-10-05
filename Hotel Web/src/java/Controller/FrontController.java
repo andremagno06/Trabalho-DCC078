@@ -5,8 +5,7 @@
  */
 package Controller;
 
-import br.com.ufjf.dcc078.Action.Controller.Action;
-import br.com.ufjf.dcc078.Action.Controller.ActionFactory;
+
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;

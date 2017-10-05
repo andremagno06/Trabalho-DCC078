@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ufjf.dcc078.Action;
+package Actions;
 
 
-import br.com.ufjf.dcc078.Action.Controller.Action;
-import br.com.ufjf.dcc078.DAO.QuartoDAO;
+
+import Controller.Action;
+import DAO.QuartoDAO;
+import Model.Quarto;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.logging.Level;
@@ -21,25 +23,28 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author 07228620674
  */
-public class ApagarQuartoAction implements Action{
+public class LerQuartoAction implements Action{
 
     @Override
     public void execute(HttpServletRequest request, HttpServletResponse response) throws IOException {
-        String nome = request.getParameter("textNome");
+        String codigo = request.getParameter("codigo");
         
-        if(nome.equals("")){
+        if(codigo.equals("")){
             response.sendRedirect("index.jsp");
         }
         else{
             try{
+                int codInt = Integer.parseInt(codigo);
+                Quarto c = QuartoDAO.getInstance().ler(codInt);
                 
-                QuartoDAO.getInstance().excluir(nome);
+                request.setAttribute("descricao", c.getDescricao());
+                request.setAttribute("estado", c.getEstado());
+                request.setAttribute("tipo", c.getTipo_quarto_id());
                 
-                request.setAttribute("nome", nome);
-                
-                RequestDispatcher view = request.getRequestDispatcher("QuartoExcluir.jsp");
+                RequestDispatcher view = request.getRequestDispatcher("ContatoLer.jsp");
                 view.forward(request, response);
-                 response.sendRedirect("MensagemSucesso.jsp");
+                response.sendRedirect("MensagemSucesso.jsp");
+                
             } catch(SQLException e){
                 response.sendRedirect("MensagemErro.jsp");
                 e.printStackTrace();

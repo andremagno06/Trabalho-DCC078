@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package br.com.ufjf.dcc078.Action.Controller;
+package Controller;
 
-import br.com.ufjf.dcc078.Action.Controller.Action;
+import Controller.Action;
 
 /**
  *

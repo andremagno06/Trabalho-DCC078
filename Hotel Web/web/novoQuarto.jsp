@@ -24,13 +24,12 @@
             <input type="text" name="textTipo"/><br/>
             <input type="submit"/>
 
-        
-            <h1>Excluir de Quarto</h1>
-            <form action="FrontController?action=ApagarQuarto" method="post">
-                Entre com seu nome
-                <input type="text" name="textNome"/><br/>
-                <input type="submit"/>
-            </form>
         </form>
+<!--        <h1>Excluir de Quarto</h1>
+        <form action="FrontController?action=ApagarQuarto" method="post">
+            Entre com seu nome
+            <input type="text" name="textNome"/><br/>
+            <input type="submit"/>
+        </form>-->
     </div>
 </div>
